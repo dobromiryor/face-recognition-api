@@ -25,7 +25,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/', (req, res)=> { res.send(database.users) })
+app.get('/', (req, res)=> { res.send('this should work') })
 app.post('/signin', (req, res) => { signin.handleSignIn(req, res, db, bcrypt) })
 app.post('/signup', (req, res) => { signup.handleSignUp(req, res, db, bcrypt) })
 app.get('/profile/:id', (req, res) => { profile.handleProfile(req, res, db) })
